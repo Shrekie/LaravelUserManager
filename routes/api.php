@@ -24,7 +24,7 @@ Route::get('test', function () {
 
 });
 
-Route::post('register', 'Auth\RegisterController@register');
+Route::post('register', 'Detached\Auth\UserRegister@create');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
