@@ -12,6 +12,7 @@ trait RegistersDetached
     
     public function registerUser(Request $request) {
 
+        //TODO: return if error
         $this->userValidator($request->all())->errors();
 
         event(new Registered($user = 
